@@ -4,9 +4,9 @@ return [
     'title' => 'Location',
     'subtitle' => 'Prime location on the French Riviera',
     'address_title' => 'Address',
-    'address' => 'Côte d\'Azur, Provence-Alpes-Côte d\'Azur, France',
+    'address' => 'Senegal, Saly Portudal, South residence',
     'distance_title' => 'Proximity',
-    'distance' => 'Only 15 minutes from Nice International Airport and 30 minutes from Monaco.',
+    'distance' => 'Only 30 minutes from Blaise Diagne International Airport and 45 minutes from Dakar.',
     'access_title' => 'Accessibility',
     'access' => 'Easy access to local markets, restaurants, and world-class attractions.',
 ];

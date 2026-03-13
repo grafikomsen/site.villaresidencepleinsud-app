@@ -6,5 +6,5 @@ return [
     'gallery' => 'Gallery',
     'amenities' => 'Amenities',
     'location' => 'Location',
-    'admin' => 'Admin',
+    'admin' => 'Log in',
 ];

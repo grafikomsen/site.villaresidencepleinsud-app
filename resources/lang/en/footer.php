@@ -2,7 +2,7 @@
 
 return [
     'about' => 'About Us',
-    'description' => 'Discover our luxury villa property located in the heart of the French Riviera, offering spectacular views and world-class accommodations.',
+    'description' => 'Discover our luxury villa located in the heart of the Petite Côte, offering spectacular views and world-class accommodations.',
     'quick_links' => 'Quick Links',
     'contact' => 'Contact Information',
     'phone' => 'Phone',
