@@ -7,6 +7,7 @@
     <title>@yield('title', 'Villa haute standing residence plein sud')</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @stack('styles')
+    <link rel="stylesheet" href="{{ asset('frontend/fontawesome/css/all.min.css') }}">
 </head>
 <body class="font-sans antialiased text-gray-900">
     <!-- Header / Navigation -->
