@@ -2,11 +2,11 @@
 
 return [
     'title' => 'Localisation',
-    'subtitle' => 'Emplacement de premier choix sur la Côte d\'Azur',
+    'subtitle' => 'Emplacement de premier choix sur la Petite Côte',
     'address_title' => 'Adresse',
-    'address' => 'Côte d\'Azur, Provence-Alpes-Côte d\'Azur, France',
+    'address' => 'Sénégal, Saly Portudal, Résidence plein sud',
     'distance_title' => 'Proximité',
-    'distance' => 'Seulement 15 minutes de l\'aéroport international de Nice et 30 minutes de Monaco.',
+    'distance' => 'Seulement 30 minutes de l\'aéroport international de Blaise Diagne et 45 minutes de Dakar.',
     'access_title' => 'Accessibilité',
     'access' => 'Accès facile aux marchés locaux, restaurants et attractions de classe mondiale.',
 ];

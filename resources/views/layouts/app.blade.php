@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="@yield('description', 'Luxurious Villa - Your Dream Property')">
-    <title>@yield('title', 'Luxury Villa Landing Page')</title>
+    <title>@yield('title', 'Villa haute standing residence plein sud')</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @stack('styles')
 </head>
@@ -13,10 +13,9 @@
     <header class="fixed w-full top-0 z-50 bg-white shadow-lg">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <div class="w-10 h-10 bg-gradient-to-br from-amber-500 to-amber-600 rounded-lg flex items-center justify-center">
-                    <span class="text-white font-bold">V</span>
-                </div>
-                <span class="text-xl font-bold text-gray-900">Villa Luxe</span>
+                <span class="text-xl font-bold text-gray-900 uppercase font-poppins">
+                    <a href="{{ route('home') }}">Villa plein sud</a>
+                </span>
             </div>
 
             <div class="hidden md:flex space-x-8 items-center">
@@ -27,20 +26,21 @@
                 <a href="{{ route('home') }}#location" class="hover:text-amber-600 transition font-medium">{{ __('nav.location') }}</a>
 
                 <!-- Language Switcher -->
-                <div class="flex space-x-2 border-l pl-4">
-                    @if(app()->getLocale() === 'en')
-                        <span class="text-amber-600 font-bold">EN</span>
-                        <a href="/locale/fr" class="text-gray-600 hover:text-amber-600">FR</a>
-                    @else
-                        <a href="/locale/en" class="text-gray-600 hover:text-amber-600">EN</a>
-                        <span class="text-amber-600 font-bold">FR</span>
-                    @endif
+                <div class="flex space-x-2 pl-4">
+                   <select onchange="window.location.href=this.value" class="border-none bg-gray-300 rounded px-3 py-2">
+                        <option value="/locale/fr" {{ app()->getLocale() == 'fr' ? 'selected' : '' }}>
+                            FR
+                        </option>
+                        <option value="/locale/en" {{ app()->getLocale() == 'en' ? 'selected' : '' }}>
+                            EN
+                        </option>
+                    </select>
+                    <a href="{{ route('admin.login') }}" class="hidden md:inline-block bg-amber-600 text-white px-6 py-2 rounded hover:bg-amber-700 transition font-medium">
+                        {{ __('nav.admin') }}
+                    </a>
                 </div>
-            </div>
 
-            <a href="{{ route('admin.login') }}" class="hidden md:inline-block bg-amber-600 text-white px-6 py-2 rounded-lg hover:bg-amber-700 transition font-medium">
-                {{ __('nav.admin') }}
-            </a>
+            </div>
 
             <!-- Mobile Menu Button -->
             <button id="mobile-menu-btn" class="md:hidden text-gray-900">
@@ -108,9 +108,9 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4 text-amber-500">{{ __('footer.contact') }}</h3>
                     <ul class="space-y-2 text-gray-400">
-                        <li>{{ __('footer.phone') }}: +33 1 23 45 67 89</li>
-                        <li>{{ __('footer.email') }}: info@villa.luxe</li>
-                        <li>{{ __('footer.address') }}: Côte d'Azur, France</li>
+                        <li>{{ __('footer.phone') }}: +221 33 333 33 33</li>
+                        <li>{{ __('footer.email') }}: contact@villa-plein-sud-saly.com</li>
+                        <li>{{ __('footer.address') }}: Sénégal, Saly Portudal, Résidence plein sud</li>
                     </ul>
                 </div>
                 <div>
@@ -129,7 +129,7 @@
                 </div>
             </div>
             <div class="border-t border-gray-800 pt-8 mt-8 text-center text-gray-400">
-                <p>&copy; 2026 Villa Luxe. {{ __('footer.rights') }}</p>
+                <p>&copy; 2026 Villa plein sud. {{ __('footer.rights') }}</p>
             </div>
         </div>
     </footer>
