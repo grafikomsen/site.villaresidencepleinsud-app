@@ -17,9 +17,9 @@ class DatabaseSeeder extends Seeder
     {
         // Create Admin User
         User::factory()->create([
-            'name' => 'Admin',
-            'email' => 'admin@villa.test',
-            'password' => bcrypt('admin123'),
+            'name' => 'Madame DOUCOURÉ',
+            'email' => 'info@villa-plein-sud-saly.com',
+            'password' => bcrypt('Villapleinsud2025'),
         ]);
 
         // Call ReservationSeeder
