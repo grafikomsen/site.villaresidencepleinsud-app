@@ -20,15 +20,9 @@
             </div>
 
             <div class="hidden md:flex space-x-8 items-center">
-                <a href="{{ route('home') }}#hero" class="hover:text-amber-600 transition font-medium">{{ __('nav.home') }}</a>
-                <a href="{{ route('home') }}#about" class="hover:text-amber-600 transition font-medium">{{ __('nav.about') }}</a>
-                <a href="{{ route('home') }}#gallery" class="hover:text-amber-600 transition font-medium">{{ __('nav.gallery') }}</a>
-                <a href="{{ route('home') }}#amenities" class="hover:text-amber-600 transition font-medium">{{ __('nav.amenities') }}</a>
-                <a href="{{ route('home') }}#location" class="hover:text-amber-600 transition font-medium">{{ __('nav.location') }}</a>
-
                 <!-- Language Switcher -->
                 <div class="flex space-x-2 pl-4">
-                   <select onchange="window.location.href=this.value" class="border-none bg-gray-300 rounded-md px-3 py-2">
+                   <select onchange="window.location.href=this.value" class="border-none bg-gray-300 rounded px-3 py-2">
                         <option value="/locale/fr" {{ app()->getLocale() == 'fr' ? 'selected' : '' }}>
                             FR
                         </option>
@@ -36,11 +30,13 @@
                             EN
                         </option>
                     </select>
-                    <a href="{{ route('admin.login') }}" class="hidden md:inline-block bg-amber-600 text-white px-6 py-2 rounded-md hover:bg-amber-700 transition font-medium">
-                        {{ __('nav.admin') }}
-                    </a>
+                    <form action="{{ route('admin.logout') }}" method="POST" class="inline">
+                        @csrf
+                        <button type="submit" class="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition font-medium">
+                            {{ __('admin.logout') }}
+                        </button>
+                    </form>
                 </div>
-
             </div>
 
             <!-- Mobile Menu Button -->
@@ -54,11 +50,6 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <div class="px-4 py-4 space-y-4">
-                <a href="{{ route('home') }}#hero" class="block hover:text-amber-600 font-medium">{{ __('nav.home') }}</a>
-                <a href="{{ route('home') }}#about" class="block hover:text-amber-600 font-medium">{{ __('nav.about') }}</a>
-                <a href="{{ route('home') }}#gallery" class="block hover:text-amber-600 font-medium">{{ __('nav.gallery') }}</a>
-                <a href="{{ route('home') }}#amenities" class="block hover:text-amber-600 font-medium">{{ __('nav.amenities') }}</a>
-                <a href="{{ route('home') }}#location" class="block hover:text-amber-600 font-medium">{{ __('nav.location') }}</a>
                 <div class="flex space-x-4 pt-2">
                     @if(app()->getLocale() === 'en')
                         <span class="text-amber-600 font-bold">EN</span>
@@ -74,13 +65,13 @@
 
     <!-- Alert Messages -->
     @if($message = Session::get('success'))
-        <div class="fixed top-20 right-4 bg-green-500 text-white px-6 py-3 rounded-md shadow-lg z-50 alert-message">
+        <div class="fixed top-20 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 alert-message">
             <p>{{ $message }}</p>
         </div>
     @endif
 
     @if($errors->any())
-        <div class="fixed top-20 right-4 bg-red-500 text-white px-6 py-3 rounded-md shadow-lg z-50 alert-message max-w-sm">
+        <div class="fixed top-20 right-4 bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 alert-message max-w-sm">
             <p>{{ $errors->first() }}</p>
         </div>
     @endif
@@ -91,7 +82,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 mt-0">
+    <footer class="bg-gray-900 text-white py-12 mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div>
@@ -110,7 +101,7 @@
                     <h3 class="text-xl font-bold mb-4 text-amber-500">{{ __('footer.contact') }}</h3>
                     <ul class="space-y-2 text-gray-400">
                         <li>{{ __('footer.phone') }}: +221 33 333 33 33</li>
-                        <li>{{ __('footer.email') }}: villasaly@gmail.com</li>
+                        <li>{{ __('footer.email') }}: contact@villa-plein-sud-saly.com</li>
                         <li>{{ __('footer.address') }}: Sénégal, Saly Portudal, Résidence plein sud</li>
                     </ul>
                 </div>

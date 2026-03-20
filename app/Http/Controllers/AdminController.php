@@ -28,7 +28,7 @@ class AdminController extends Controller
             'password' => 'required|string',
         ]);
 
-        if (auth()->attempt($credentials)) {
+        if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             return redirect()->route('admin.dashboard')->with('success', __('admin.login_success'));
         }
@@ -73,7 +73,7 @@ class AdminController extends Controller
      */
     public function logout(Request $request): RedirectResponse
     {
-        Auth()->logout();
+        Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 

@@ -26,7 +26,7 @@ Route::prefix('admin')->group(function(){
 
 // Language Switcher
 Route::get('/locale/{locale}', function ($locale) {
-    if (in_array($locale, ['en', 'fr'])) {
+    if (in_array($locale, ['fr', 'en'])) {
         session(['locale' => $locale]);
         app()->setLocale($locale);
     }

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('admin.app')
 
 @section('title', __('admin.dashboard_title'))
 
@@ -12,12 +12,6 @@
                 <h1 class="text-4xl font-bold text-gray-900">{{ __('admin.dashboard_title') }}</h1>
                 <p class="text-gray-600 mt-2">{{ __('admin.dashboard_subtitle') }}</p>
             </div>
-            <form action="{{ route('admin.logout') }}" method="POST" class="inline">
-                @csrf
-                <button type="submit" class="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition font-medium">
-                    {{ __('admin.logout') }}
-                </button>
-            </form>
         </div>
 
         <!-- Stats Cards -->
