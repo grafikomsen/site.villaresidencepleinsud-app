@@ -9,24 +9,24 @@
         <!-- Header -->
         <div class="flex justify-between items-center mb-8">
             <div>
-                <h1 class="text-4xl font-bold text-gray-900">{{ __('admin.dashboard_title') }}</h1>
+                <h1 class="text-4xl font-bold text-gray-900 font-Playfair">{{ __('admin.dashboard_title') }}</h1>
                 <p class="text-gray-600 mt-2">{{ __('admin.dashboard_subtitle') }}</p>
             </div>
         </div>
 
         <!-- Stats Cards -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div class="bg-white rounded-lg shadow p-6 border-l-4 border-amber-500">
+            <div class="bg-white shadow p-6 border-l-4 border-amber-500">
                 <div class="flex items-center justify-between">
                     <div>
                         <p class="text-gray-600 text-sm">{{ __('admin.total_reservations') }}</p>
                         <p class="text-3xl font-bold text-gray-900 mt-2">{{ $totalCount }}</p>
                     </div>
-                    <div class="text-4xl">📅</div>
+                    <div class="text-4xl"><i class="fa-solid text-primary fa-calendar-day"></i></div>
                 </div>
             </div>
 
-            <div class="bg-white rounded-lg shadow p-6 border-l-4 border-yellow-500">
+            <div class="bg-white shadow p-6 border-l-4 border-yellow-500">
                 <div class="flex items-center justify-between">
                     <div>
                         <p class="text-gray-600 text-sm">{{ __('admin.pending') }}</p>
@@ -36,23 +36,23 @@
                 </div>
             </div>
 
-            <div class="bg-white rounded-lg shadow p-6 border-l-4 border-green-500">
+            <div class="bg-white shadow p-6 border-l-4 border-green-500">
                 <div class="flex items-center justify-between">
                     <div>
                         <p class="text-gray-600 text-sm">{{ __('admin.contacted') }}</p>
                         <p class="text-3xl font-bold text-gray-900 mt-2">{{ $totalCount - $pendingCount }}</p>
                     </div>
-                    <div class="text-4xl">✅</div>
+                    <div class="text-4xl"><i class="fa-solid text-green-500 fa-check-to-slot"></i></div>
                 </div>
             </div>
         </div>
 
         <!-- Reservations Table -->
-        <div class="bg-white rounded-lg shadow overflow-hidden">
+        <div class="bg-white shadow overflow-hidden">
             <div class="px-6 py-4 border-b border-gray-200 flex justify-between items-center">
                 <h2 class="text-2xl font-bold text-gray-900">{{ __('admin.reservations_list') }}</h2>
                 <form action="{{ route('home') }}" method="GET" class="inline">
-                    <button type="submit" class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition text-sm">
+                    <button type="submit" class="bg-gray-600 text-white px-4 py-2 hover:bg-gray-700 transition text-sm">
                         ← {{ __('admin.back_to_home') }}
                     </button>
                 </form>
@@ -94,7 +94,7 @@
                                         @endif
                                     </td>
                                     <td class="px-6 py-4">
-                                        <div class="flex gap-2 justify-center">
+                                        <div class="flex gap-2 justify-star">
                                             <button class="edit-btn bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition"
                                                 data-id="{{ $reservation->id }}"
                                                 data-name="{{ $reservation->name }}"
@@ -102,14 +102,14 @@
                                                 data-phone="{{ $reservation->phone }}"
                                                 data-message="{{ $reservation->message }}"
                                                 data-date="{{ $reservation->visit_date->format('d/m/Y H:i') }}">
-                                                👁️ {{ __('admin.view') }}
+                                                <i class="fa-solid fa-eye"></i>
                                             </button>
 
                                             @if(!$reservation->isContacted())
                                                 <form action="{{ route('admin.mark-contacted', $reservation) }}" method="POST" class="inline">
                                                     @csrf
                                                     <button type="submit" class="bg-green-600 text-white px-3 py-1 rounded text-sm hover:bg-green-700 transition">
-                                                        ✓ {{ __('admin.mark_contacted') }}
+                                                        <i class="fa-solid fa-check"></i>
                                                     </button>
                                                 </form>
                                             @endif
@@ -118,7 +118,7 @@
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="bg-red-600 text-white px-3 py-1 rounded text-sm hover:bg-red-700 transition">
-                                                    🗑️ {{ __('admin.delete') }}
+                                                    <i class="fa-solid fa-trash"></i>
                                                 </button>
                                             </form>
                                         </div>
@@ -144,7 +144,7 @@
 
 <!-- Details Modal -->
 <div id="detailsModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-    <div class="bg-white rounded-lg shadow-2xl max-w-md w-full p-6">
+    <div class="bg-white shadow-2xl max-w-md w-full p-6">
         <div class="flex justify-between items-center mb-4">
             <h3 class="text-xl font-bold text-gray-900">{{ __('admin.reservation_details') }}</h3>
             <button class="text-gray-500 hover:text-gray-700" onclick="closeModal()">✕</button>

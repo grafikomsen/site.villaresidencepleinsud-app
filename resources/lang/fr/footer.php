@@ -9,5 +9,5 @@ return [
     'email' => 'Email',
     'address' => 'Adresse',
     'follow' => 'Nous Suivre',
-    'rights' => 'Tous droits réservés. Conçu par GRAPHIKOMSEN',
+    'rights' => 'Tous droits réservés. Conçu par AGENTECHSN'
 ];

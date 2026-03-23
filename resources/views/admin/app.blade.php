@@ -9,12 +9,12 @@
     @stack('styles')
     <link rel="stylesheet" href="{{ asset('frontend/fontawesome/css/all.min.css') }}">
 </head>
-<body class="font-sans antialiased text-gray-900">
+<body class="font-Open text-gray-900">
     <!-- Header / Navigation -->
     <header class="fixed w-full top-0 z-50 bg-white shadow-lg">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <span class="text-xl font-bold text-gray-900 uppercase font-poppins">
+                <span class="text-xl font-bold text-gray-900 uppercase font-Playfair">
                     <a href="{{ route('home') }}">Villa plein sud</a>
                 </span>
             </div>
@@ -22,7 +22,7 @@
             <div class="hidden md:flex space-x-8 items-center">
                 <!-- Language Switcher -->
                 <div class="flex space-x-2 pl-4">
-                   <select onchange="window.location.href=this.value" class="border-none bg-gray-300 rounded px-3 py-2">
+                   <select onchange="window.location.href=this.value" class="border-none bg-gray-300 px-3 py-2">
                         <option value="/locale/fr" {{ app()->getLocale() == 'fr' ? 'selected' : '' }}>
                             FR
                         </option>
@@ -32,7 +32,7 @@
                     </select>
                     <form action="{{ route('admin.logout') }}" method="POST" class="inline">
                         @csrf
-                        <button type="submit" class="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition font-medium">
+                        <button type="submit" class="bg-red-600 text-white px-6 py-2 hover:bg-red-700 transition font-medium">
                             {{ __('admin.logout') }}
                         </button>
                     </form>
@@ -52,11 +52,11 @@
             <div class="px-4 py-4 space-y-4">
                 <div class="flex space-x-4 pt-2">
                     @if(app()->getLocale() === 'en')
-                        <span class="text-amber-600 font-bold">EN</span>
-                        <a href="/locale/fr" class="text-gray-600 hover:text-amber-600">FR</a>
+                        <span class="text-primary font-bold">EN</span>
+                        <a href="/locale/fr" class="text-gray-600 hover:text-primary">FR</a>
                     @else
-                        <a href="/locale/en" class="text-gray-600 hover:text-amber-600">EN</a>
-                        <span class="text-amber-600 font-bold">FR</span>
+                        <a href="/locale/en" class="text-gray-600 hover:text-primary">EN</a>
+                        <span class="text-primary font-bold">FR</span>
                     @endif
                 </div>
             </div>
@@ -86,11 +86,11 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4 text-amber-500">{{ __('footer.about') }}</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-primary font-Playfair">{{ __('footer.about') }}</h3>
                     <p class="text-gray-400">{{ __('footer.description') }}</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold mb-4 text-amber-500">{{ __('footer.quick_links') }}</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-primary font-Playfair">{{ __('footer.quick_links') }}</h3>
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="{{ route('home') }}#hero" class="hover:text-amber-500 transition">{{ __('nav.home') }}</a></li>
                         <li><a href="{{ route('home') }}#about" class="hover:text-amber-500 transition">{{ __('nav.about') }}</a></li>
@@ -98,7 +98,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold mb-4 text-amber-500">{{ __('footer.contact') }}</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-primary font-Playfair">{{ __('footer.contact') }}</h3>
                     <ul class="space-y-2 text-gray-400">
                         <li>{{ __('footer.phone') }}: +221 33 333 33 33</li>
                         <li>{{ __('footer.email') }}: contact@villa-plein-sud-saly.com</li>
@@ -106,7 +106,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold mb-4 text-amber-500">{{ __('footer.follow') }}</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-primary font-Playfair">{{ __('footer.follow') }}</h3>
                     <div class="flex space-x-4">
                         <a href="#" class="text-gray-400 hover:text-amber-500 transition">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
