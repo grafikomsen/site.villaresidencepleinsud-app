@@ -9,6 +9,15 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @stack('styles')
     <link rel="stylesheet" href="{{ asset('frontend/fontawesome/css/all.min.css') }}">
+    <style>
+        .font-Open{
+            font-family: "Open Sans", sans-serif;
+        }
+
+        .font-Playfair: {
+            "Playfair Display", serif;
+        }
+    </style>
 </head>
 <body class="font-Open text-gray-900">
     <!-- Header / Navigation -->
