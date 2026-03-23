@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="@yield('description', 'Luxurious Villa - Your Dream Property')">
-    <title>@yield('title', 'Villa haute standing residence plein sud')</title><script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>@yield('title', 'Villa haute standing residence plein sud')</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @stack('styles')
     <link rel="stylesheet" href="{{ asset('frontend/fontawesome/css/all.min.css') }}">
@@ -52,11 +53,11 @@
             <div class="px-4 py-4 space-y-4">
                 <div class="flex space-x-4 pt-2">
                     @if(app()->getLocale() === 'en')
-                        <span class="text-primary font-bold">EN</span>
-                        <a href="/locale/fr" class="text-gray-600 hover:text-primary">FR</a>
+                        <span class="text-[#d6873f] font-bold">EN</span>
+                        <a href="/locale/fr" class="text-gray-600 hover:text-[#d6873f]">FR</a>
                     @else
-                        <a href="/locale/en" class="text-gray-600 hover:text-primary">EN</a>
-                        <span class="text-primary font-bold">FR</span>
+                        <a href="/locale/en" class="text-gray-600 hover:text-[#d6873f]">EN</a>
+                        <span class="text-[#d6873f] font-bold">FR</span>
                     @endif
                 </div>
             </div>
@@ -86,19 +87,19 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div>
-                    <h3 class="text-2xl font-bold mb-4 text-primary font-Playfair">{{ __('footer.about') }}</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-[#d6873f] font-Playfair">{{ __('footer.about') }}</h3>
                     <p class="text-gray-400">{{ __('footer.description') }}</p>
                 </div>
                 <div>
-                    <h3 class="text-2xl font-bold mb-4 text-primary font-Playfair">{{ __('footer.quick_links') }}</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-[#d6873f] font-Playfair">{{ __('footer.quick_links') }}</h3>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="{{ route('home') }}#hero" class="hover:text-amber-500 transition">{{ __('nav.home') }}</a></li>
-                        <li><a href="{{ route('home') }}#about" class="hover:text-amber-500 transition">{{ __('nav.about') }}</a></li>
-                        <li><a href="{{ route('home') }}#gallery" class="hover:text-amber-500 transition">{{ __('nav.gallery') }}</a></li>
+                        <li><a href="{{ route('home') }}#hero" class="hover:text-[#d6873f] transition">{{ __('nav.home') }}</a></li>
+                        <li><a href="{{ route('home') }}#about" class="hover:text-[#d6873f] transition">{{ __('nav.about') }}</a></li>
+                        <li><a href="{{ route('home') }}#gallery" class="hover:text-[#d6873f] transition">{{ __('nav.gallery') }}</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-2xl font-bold mb-4 text-primary font-Playfair">{{ __('footer.contact') }}</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-[#d6873f] font-Playfair">{{ __('footer.contact') }}</h3>
                     <ul class="space-y-2 text-gray-400">
                         <li>{{ __('footer.phone') }}: +221 33 333 33 33</li>
                         <li>{{ __('footer.email') }}: contact@villa-plein-sud-saly.com</li>
@@ -106,15 +107,15 @@
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-2xl font-bold mb-4 text-primary font-Playfair">{{ __('footer.follow') }}</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-[#d6873f] font-Playfair">{{ __('footer.follow') }}</h3>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-amber-500 transition">
+                        <a href="#" class="text-gray-400 hover:text-[#d6873f] transition">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-amber-500 transition">
+                        <a href="#" class="text-gray-400 hover:text-[#d6873f] transition">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7-2.25 4.5-7 7-7 7z"/></svg>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-amber-500 transition">
+                        <a href="#" class="text-gray-400 hover:text-[#d6873f] transition">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3.501 12.5l-5.5 3v-6l5.5 3z"/></svg>
                         </a>
                     </div>
