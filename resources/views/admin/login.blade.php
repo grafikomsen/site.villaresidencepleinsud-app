@@ -55,7 +55,7 @@
 
                 <!-- Submit Button -->
                 <button type="submit"
-                    class="w-full bg-primary hover:to-primary/70 text-white font-bold py-4 transition transform hover:scale-105 flex items-center justify-center">
+                    class="w-full bg-primary hover:to-primary/70 text-white py-4 transition transform hover:scale-105 flex items-center justify-center">
                     {{ __('admin.login_button') }}
                     <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
