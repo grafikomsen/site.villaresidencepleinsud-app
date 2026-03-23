@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="@yield('description', 'Luxurious Villa - Your Dream Property')">
-    <title>@yield('title', 'Villa haute standing residence plein sud')</title>
+    <title>@yield('title', 'Villa haute standing residence plein sud')</title><script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @stack('styles')
     <link rel="stylesheet" href="{{ asset('frontend/fontawesome/css/all.min.css') }}">

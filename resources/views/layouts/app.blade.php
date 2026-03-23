@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="@yield('description', 'La villa meublée haut de gamme vous offre, à vous et à votre famille, un cadre idéal pour profiter pleinement de votre séjour à la Villa Plein Sud, située à Saly au Sénégal.')">
     <title>@yield('title', 'Villa Meublée Haut de Gamme pour un Séjour Inoubliable à Saly')</title>
-    <link rel="icon" type="image/svg+xml" href="{{ asset('frontend/images/favicon.avif') }}">
+    <link rel="icon" type="image/svg+xml" href="{{ asset('frontend/images/favicon.avif') }}"><script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @stack('styles')
     <link rel="stylesheet" href="{{ asset('frontend/fontawesome/css/all.min.css') }}">
