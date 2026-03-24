@@ -20,11 +20,11 @@
         <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight font-Playfair animate-fade-in">
             {{ __('hero.title') }}
         </h1>
-        <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed animate-fade-in" style="animation-delay: 0.2s;">
+        <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed animate-fade-in" style="animation-delay: 2s;">
             {{ __('hero.subtitle') }}
         </p>
-        <div class="flex flex-col md:flex-row gap-4 justify-center animate-fade-in" style="animation-delay: 0.4s;">
-            <a href="#reservation" class="px-4 py-2 bg-[#d6873f] animate-pulse hover:bg-[#d6873f]/90 font-bold text-lg transition transform hover:scale-105 inline-flex items-center justify-center">
+        <div class="flex flex-col md:flex-row gap-4 justify-center animate-fade-in" style="animation-delay: 4s;">
+            <a href="#reservation" class="px-4 py-2 bg-[#d6873f] animate-bounce hover:bg-[#d6873f]/90 font-bold text-lg transition transform hover:scale-105 inline-flex items-center justify-center">
                 {{ __('hero.book_visit') }}
                 <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
@@ -37,13 +37,6 @@
                 </svg>
             </a>
         </div>
-    </div>
-
-    <!-- Scroll Indicator -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
-        <svg class="w-6 h-6 text-[#d6873f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-        </svg>
     </div>
 </section>
 
@@ -67,20 +60,20 @@
 
                 <div class="grid grid-cols-2 gap-4">
                     <div class="bg-gray-50 p-6 border-2 border-amber-100 hover:border-[#d6873f] transition rounded-bl-[20px] shadow-2xl shadow-[#d6873f]/30">
-                        <div class="text-4xl font-bold font-Playfair text-amber-600 mb-2">{{ __('about.size') }}</div>
-                        <p class="text-gray-500 font-semibold text-xl">{{ __('about.size_label') }}</p>
+                        <div class="text-2xl md:text-4xl font-bold font-Playfair text-[#d6873f] mb-2">{{ __('about.size') }}</div>
+                        <p class="text-gray-500 font-semibold text-base md:text-xl">{{ __('about.size_label') }}</p>
                     </div>
                     <div class="bg-gray-50 p-6 border-2 border-amber-100 hover:border-[#d6873f] transition rounded-bl-[20px] shadow-2xl shadow-[#d6873f]/30">
-                        <div class="text-4xl font-bold font-Playfair text-amber-600 mb-2">{{ __('about.bedrooms') }}</div>
-                        <p class="text-gray-500 font-semibold text-xl">{{ __('about.bedroom_label') }}</p>
+                        <div class="text-2xl md:text-4xl font-bold font-Playfair text-[#d6873f] mb-2">{{ __('about.bedrooms') }}</div>
+                        <p class="text-gray-500 font-semibold text-base md:text-xl">{{ __('about.bedroom_label') }}</p>
                     </div>
                     <div class="bg-gray-50 p-6 border-2 border-amber-100 hover:border-[#d6873f] transition rounded-bl-[20px] shadow-2xl shadow-[#d6873f]/30">
-                        <div class="text-4xl font-bold font-Playfair text-amber-600 mb-2">{{ __('about.bathrooms') }}</div>
-                        <p class="text-gray-500 font-semibold text-xl">{{ __('about.bathroom_label') }}</p>
+                        <div class="text-2xl md:text-4xl font-bold font-Playfair text-[#d6873f] mb-2">{{ __('about.bathrooms') }}</div>
+                        <p class="text-gray-500 font-semibold text-base md:text-xl">{{ __('about.bathroom_label') }}</p>
                     </div>
                     <div class="bg-gray-50 p-6 border-2 border-amber-100 hover:border-[#d6873f] transition rounded-bl-[20px] shadow-2xl shadow-[#d6873f]/30">
-                        <div class="text-4xl font-bold font-Playfair text-amber-600 mb-2">{{ __('about.price') }}</div>
-                        <p class="text-gray-500 font-semibold text-xl">{{ __('about.price_label') }}</p>
+                        <div class="text-2xl md:text-4xl font-bold font-Playfair text-[#d6873f] mb-2">{{ __('about.price') }}</div>
+                        <p class="text-gray-500 font-semibold text-base md:text-xl">{{ __('about.price_label') }}</p>
                     </div>
                 </div>
             </div>

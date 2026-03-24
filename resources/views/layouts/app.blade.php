@@ -9,14 +9,15 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @stack('styles')
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap">
     <link rel="stylesheet" href="{{ asset('frontend/fontawesome/css/all.min.css') }}">
     <style>
         .font-Open{
             font-family: "Open Sans", sans-serif;
         }
 
-        .font-Playfair: {
-            "Playfair Display", serif;
+        .font-Playfair{
+            font-family: "Playfair Display", serif;
         }
     </style>
 </head>
